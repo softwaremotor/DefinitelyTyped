@@ -839,6 +839,19 @@ export interface LabelProps {
     content?: React.ReactElement<any> | ContentRenderer<Label>;
 }
 
+export class LabelList extends React.Component<LabelListProps> { }
+
+export interface LabelListProps {
+    dataKey: DataKey;
+    valueAccessor?: DataKey;
+    content?: React.ReactElement<any> | ContentRenderer<LabelProps>;
+    position?: PositionType;
+    offset?: number;
+    formatter?: LabelFormatter;
+    data?: object[];
+    clockWise: number;
+}
+
 export type AxisDomain = string | number | ContentRenderer<any> | 'auto' | 'dataMin' | 'dataMax';
 
 export interface XPadding {
